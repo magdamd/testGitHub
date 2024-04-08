@@ -1,6 +1,5 @@
-a = 2
-b = 5
+def add(a, b):
+  return a + b
 
-c = a*b
-
-print("The result is given by c = ", c)
+def subtraction(a, b):
+  return a + b

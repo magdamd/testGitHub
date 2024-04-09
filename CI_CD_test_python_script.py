@@ -7,7 +7,6 @@ def add(a, b):
   f.write(str(r))
   f.close()
   #np.savetxt("New_version_values.txt", np.asarray(r), fmt="%1.4e")#'test.out', x, fmt='%1.4e'
-  # just for update
   return r
 
 def subtract(a, b):

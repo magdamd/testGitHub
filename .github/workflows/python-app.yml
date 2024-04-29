@@ -38,10 +38,10 @@ jobs:
       run: |
         pytest
 
-    - name: Commit Changes
-      run: |
-        git config --global user.email "magdamduarte@gmail.com"
-        git config --global user.name "magdamd"
-        git add New_version_values.txt
-        git commit -m "Update New_version_values.txt"
-        git push
+    #- name: Commit Changes
+      #run: |
+        #git config --global user.email "magdamduarte@gmail.com"
+        #git config --global user.name "magdamd"
+        #git add New_version_values.txt
+        #git commit -m "Update New_version_values.txt"
+        #git push

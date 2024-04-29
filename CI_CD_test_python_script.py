@@ -13,7 +13,7 @@ def subtract(a, b):
   r = a - b
   #with open("New_version_values.txt", "ab") as f:
   #np.savetxt("New_version_values.txt", np.asarray(r), fmt="%1.4e")
-  f = open("New_version_values.txt", 'w')
+  f = open("New_version_values.txt", 'a')
   f.write(str(r))
   f.close()
   # # #

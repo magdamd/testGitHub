@@ -1,1 +1,3 @@
-42
+
+Addition result: 4
+Subtraction result: 2

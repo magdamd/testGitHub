@@ -65,9 +65,12 @@ jobs:
       env:
         GEN: ${{ secrets.GEN }}
       run: |
-        #git config --global user.email "magdamduarte@gmail.com"
-        #git config --global user.name "magdamd"
+        git config --global user.email "magdamduarte@gmail.com"
+        git config --global user.name "magdamd"
+        git config --global credential.helper cache
+        git config --global credential.helper 'cache --timeout=3600'
         git add New_version_values.txt
         git commit -m "Update New_version_values.txt"
-        git push https://$GEN@github.com/magdamd/testGitHub.git
+        #git push https://$GEN@github.com/magdamd/testGitHub.git
+        git push https://github.com/magdamd/testGitHub.git
 

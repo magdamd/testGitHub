@@ -39,6 +39,8 @@ jobs:
         pytest
 
     - name: Print PAT and Environment Variables
+      env:
+        GEN: ${{ secrets.GEN }}
       run: |
         echo "Personal Access Token (PAT): $GEN"
         env | grep GEN  # Print environment variables containing GEN

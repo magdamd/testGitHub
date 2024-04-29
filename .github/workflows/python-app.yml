@@ -37,22 +37,22 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-    - name: Check Permissions and Secrets
+
+
+
+        
+    - name: Verify Permissions
+      env:
+        GEN: ${{ secrets.GEN }} # Assuming PAT is stored as a secret
       run: |
-        echo "Current user: $(whoami)"
-        echo "Current directory: $(pwd)"
-        echo "List files and directories: $(ls -la)"
-        echo "List environment variables: $(env)"
-        echo "Check Git config: $(git config --list)"
-        echo "Check Git remote URLs: $(git remote -v)"
-        echo "Secret value: ${{ secrets.PAT }}" # Modify to match your secret name
-        git config --global credential.helper cache
-        git config --global user.email "magdamduarte@gmail.com"
-        git config --global user.name "magdamd"
-        git remote add origin https://${{ secrets.PAT }}@github.com/magdamd/testGitHub.git
+        git clone https://$GEN@github.com/magdamd/testGitHub.git temp_repo
+        cd temp_repo
         git fetch
-        git status
         git log -1
+      
+
+
+
 
     - name: Commit Changes
       env:
